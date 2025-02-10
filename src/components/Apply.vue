@@ -19,7 +19,7 @@
     <p class="h1">
       Inviting developers to build the next ecosystem of on-chain agents & off-chain applications powered by open source AI & crypto infrastructure.
     </p>
-    <a v-play-click-sound class="apply__action" href="#">Apply now</a>
+    <MainLink type="primary" href="#">Apply now</MainLink>
   </section>
 </template>
 

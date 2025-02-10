@@ -6,7 +6,7 @@
         <span class="desc-card__desc">Talk with uncensored AI agents</span>
       </div>
       <div class="desc-card__actions">
-        <a v-play-click-sound class="animated-link" href="#">Use now</a>
+        <MainLink type="secondary" href="#">Use now</MainLink>
         <a v-play-click-sound class="animated-link" href="#">Community convos</a>
       </div>
       <div class="desc-card__img">
@@ -25,7 +25,7 @@
         <span class="desc-card__desc">Develop your own conversational agents</span>
       </div>
       <div class="desc-card__actions">
-        <a v-play-click-sound class="animated-link" href="#">Use now</a>
+        <MainLink type="secondary" href="#">Use now</MainLink>
         <a v-play-click-sound class="animated-link" href="#">Documentation</a>
       </div>
       <div class="desc-card__img">
@@ -65,11 +65,6 @@
     border: 1px solid var(--color-primary);
     padding: 2rem;
 
-    &__info,
-    &__img {
-      flex: 1;
-    }
-
     &__info {
       grid-area: info;
       display: flex;
@@ -100,20 +95,6 @@
       justify-content: flex-start;
       align-items: center;
       gap: 1rem;
-
-      // a {
-      //   padding: 0.5rem 1rem;
-      //   border: 1px solid var(--color-primary);
-      //   border-radius: 0.5rem;
-      //   text-decoration: none;
-      //   color: var(--color-primary);
-      //   transition: all 0.3s;
-
-      //   &:hover {
-      //     background-color: var(--color-primary);
-      //     color: var(--color-secondary);
-      //   }
-      // }
     }
 
     @media (max-width: 1024px) {

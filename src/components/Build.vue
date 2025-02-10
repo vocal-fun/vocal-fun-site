@@ -37,14 +37,27 @@
       </div>
     </div>
     <div class="build__actions">
-      <a v-play-click-sound class="animated-link" href="#">Live demo</a>
-      <a v-play-click-sound class="animated-link" href="#">Github</a>
+      <MainLink type="secondary" :href="app">Live demo</MainLink>
+      <a v-play-click-sound class="build__github animated-link" target="_blank" rel="noopener noreferrer" :href="github">
+        <NuxtImg
+          format="webp"
+          sizes="48px"
+          loading="lazy"
+          src="/img/github.png"
+          alt="Github Logo"
+        />
+        Github
+      </a>
     </div>
   </section>
   <span class="divider"></span>
 </template>
 
 <script setup lang="ts">
+import { socialMedia, mainAppUrl } from '~/consts';
+
+const { github } = socialMedia;
+const app = mainAppUrl;
 </script>
 
 <style scoped lang="scss">
@@ -79,6 +92,16 @@
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
+  }
+
+  &__github {
+    display: flex;
+    gap: 0.5rem;
+
+    > img {
+      width: 20px;
+      aspect-ratio: 1;
+    }
   }
 
   h1 {

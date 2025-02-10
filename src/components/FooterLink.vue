@@ -1,5 +1,5 @@
 <template>
-  <a class="footer-link" :href="href" :target="target" rel="noopener noreferrer">
+  <a v-play-click-sound class="footer-link" rel="noopener noreferrer" :href="href" :target="target">
     <NuxtImg
       v-if="hasIcon"
       class="footer-link__icon"
@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-// import { icons } from '~/consts';
 import type { SocialMediaKey } from '~/types';
 
 const props = defineProps<{

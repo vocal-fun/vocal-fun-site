@@ -41,7 +41,7 @@
       <span class="logo-bar"><span class="logo-bar-element"></span></span>
     </span>
 
-    <a v-play-click-sound class="app-link animated-link" target="_blank" rel="noopener noreferrer" :href="app">Open app</a>
+    <a v-play-click-sound class="app-link hoverable-link" target="_blank" rel="noopener noreferrer" :href="app">Open app</a>
   </header>
   <span class="divider"></span>
 </template>

@@ -1,79 +1,76 @@
 <template>
   <a
-    class=""
+    v-play-click-sound
+    class="link"
     target="_blank"
     rel="nofollow noopener"
     :class="type"
     :href="href"
   >
     <slot />
-    <div class="button__arrow">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
+    <div v-if="isSecondary" class="link__arrow">
+      <NuxtImg
+        src="/img/arrow.svg"
+        alt="Arrow"
+        width="16"
+        height="14"
+        quality="100"
+        format="webp"
+        loading="lazy"
+      />
     </div>
   </a>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  type?: 'primary' | 'secondary';
-  href?: string;
+const props = defineProps<{
+  type: 'primary' | 'secondary';
+  href: string;
 }>();
+
+const isSecondary = computed(() => props.type === 'secondary');
 </script>
 
 <style scoped lang="scss">
-.button {
-  height: 56px;
-  width: 230px;
+.link {
+  line-height: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 20px;
-  border: 1px solid var(--color-primary);
+  padding: 0.5rem 1rem;
   border-radius: 100vw;
-  color: var(--color-background);
-  background-color: var(--color-primary);
-  font-size: 18px;
-  font-weight: 500;
+  color: var(--color-primary);
   letter-spacing: 0.005em;
   cursor: pointer;
   transition: background-color 0.3s;
   text-align: center;
   text-wrap-style: balance;
-}
 
-.button:hover {
-  background-color: #F5F5F5;
-}
+  &.primary,
+  &.secondary {
+    &:hover {
+      background-color: #00FA0033;
 
-.button.secondary {
-  color: var(--color-primary);
-  border: 1px solid #646464;
-  background-color: #333333;
-}
+      > .link__arrow {
+        animation: arrow-move 1s infinite;
+      }
+    }
+  }
 
-.button.secondary:hover {
-  background-color: #646464;
-}
+  &.primary {
+    background: #001400;
+    border: 2px solid #00FA0033;
+    box-shadow: 0px 0px 10.97px 0px #0ADC0F, 0px 1px 11.96px 0px #0ADC0F, 0px 0px 36px 0px #20FF2480 inset;
+  }
 
-.button__arrow {
-  margin-left: 0.3rem;
-  width: 1rem;
-  height: 1rem;
-}
+  &.secondary {
+    border: 2px solid var(--color-secondary-bg);
+  }
 
-.button:hover .button__arrow {
-  animation: arrow-move 1s infinite;
+  &__arrow {
+    margin-left: 0.3rem;
+    margin-top: 0.4rem;
+  }
 }
 
 @keyframes arrow-move {
