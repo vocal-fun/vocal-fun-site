@@ -52,7 +52,7 @@
   margin-top: calc(-10vw - 2rem);
 
   &-card {
-    max-width: 80vw;
+    width: 80vw;
     z-index: 1;
     background-color: var(--color-background);
     display: grid;
