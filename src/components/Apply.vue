@@ -16,10 +16,10 @@
         <Pagination />
       </template> -->
     </Carousel>
-    <p class="h1">
+    <p v-if="false" class="h1">
       Inviting developers to build the next ecosystem of on-chain agents & off-chain applications powered by open source AI & crypto infrastructure.
     </p>
-    <MainLink type="primary" href="#">Apply now</MainLink>
+    <MainLink v-if="false" type="primary" href="#">Apply now</MainLink>
   </section>
 </template>
 
@@ -59,6 +59,7 @@ const carouselConfig: Partial<CarouselConfig> = {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 0;
+  min-height: 30rem; // remove it later
   &__action {
     margin: 1rem 0;
     padding: 0.5rem 1rem;
