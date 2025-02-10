@@ -35,7 +35,7 @@ import type { CarouselConfig, CarouselExposed } from 'vue3-carousel';
 
 const carouselRef = shallowRef<CarouselExposed | null>(null);
 
-const agents = Array.from({ length: 7 }, (_, index) => ({
+const agents = Array.from({ length: 8 }, (_, index) => ({
   id: index + 1,
   url: `/img/agents/${index + 1}.png`,
 }));
