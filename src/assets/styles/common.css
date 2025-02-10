@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-background);
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color-background);
+  color: var(--color-primary);
+
+  font-family: "PixelMix", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+section:not(.carousel) {
+  min-height: 100svh;
+  width: 100%;
+  padding: 1rem;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary-bg);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+/* #region Carousel */
+/* .carousel__next:focus-visible,
+.carousel__prev:focus-visible {
+  border-radius: var(--vc-nav-border-radius);
+} */
+
+.carousel__viewport {
+  perspective: 2000px;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: opacity var(--carousel-transition),
+    transform var(--carousel-transition);
+}
+
+.carousel.is-dragging .carousel__slide {
+  transition: opacity var(--carousel-transition),
+    transform var(--carousel-transition);
+}
+/* #endregion */
+
+/* #region NuxtImg */
+.image {
+  opacity: 1;
+  transition: transform .7s 0.7s ease, opacity .7s 0.7s ease;
+}
+
+.image.preload {
+  transform: translateY(2rem);
+  opacity: 0;
+}
+/* #endregion */
+
+/* #region TABINDEX */
+/* Add custom focus styles for better accessibility */
+:focus-visible {
+  outline: 3px dashed var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+  transition: outline-color 0.2s ease-in-out, outline-offset 0.2s ease-in-out;
+}
+/* For buttons specifically */
+button:focus-visible {
+  outline: none; /* Remove default browser outline */
+  box-shadow: 0 0 6px 2px var(--color-primary); /* Glowing effect around the button */
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  transition: box-shadow 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+/* #endregion */
+
+/* #region LINKS */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.animated-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-secondary-bg);
+  opacity: 1;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-out;
+}
+
+.animated-link:hover::after {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.animated-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.animated-link:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.cursor-link {
+  display: inline-block;
+  color: currentColor;
+  cursor: pointer;
+}
+
+.cursor-link::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+/* #endregion */

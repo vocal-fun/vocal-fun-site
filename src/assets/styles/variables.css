@@ -1,0 +1,22 @@
+:root {
+  --gradient-bg: linear-gradient(0deg, rgba(55, 211, 57, 0) 0%, rgba(55, 211, 57, 0.12) 100%);
+  --color-primary: #20FF24;
+  --text-shadow-primary: 2px 2px 16px #0ADC0F;
+  --color-secondary-bg: #1A7034;
+  --color-background: #000;
+  --color-secondary: rgba(255, 255, 255, 0.5);
+  --color-tertiary: rgba(255, 255, 255, 0.6);
+  --xs: 320px;
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --xxl: 1536px;
+  /* Carousel */
+  --carousel-transition: 300ms;
+  --carousel-opacity-inactive: 0.6;
+  --carousel-opacity-active: 1;
+  --carousel-opacity-near: 0.8;
+  /* --vc-nav-background: var(--color-secondary-bg);
+  --vc-nav-border-radius: 50%; */
+}

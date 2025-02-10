@@ -1,0 +1,167 @@
+<template>
+  <section class="desc">
+    <div class="desc-card">
+      <div class="desc-card__info">
+        <span class="desc-card__title">REALTIME CONVERSATION</span>
+        <span class="desc-card__desc">Talk with uncensored AI agents</span>
+      </div>
+      <div class="desc-card__actions">
+        <a v-play-click-sound class="animated-link" href="#">Use now</a>
+        <a v-play-click-sound class="animated-link" href="#">Community convos</a>
+      </div>
+      <div class="desc-card__img">
+        <NuxtImg
+          src="/img/example.png"
+          alt="Realtime conversation example"
+          format="webp"
+          loading="lazy"
+          sizes="90vw md:500px"
+        />
+      </div>
+    </div>
+    <div class="desc-card">
+      <div class="desc-card__info">
+        <span class="desc-card__title">DEVELOPER TOOLKIP</span>
+        <span class="desc-card__desc">Develop your own conversational agents</span>
+      </div>
+      <div class="desc-card__actions">
+        <a v-play-click-sound class="animated-link" href="#">Use now</a>
+        <a v-play-click-sound class="animated-link" href="#">Documentation</a>
+      </div>
+      <div class="desc-card__img">
+        <NuxtImg
+          src="/img/code.png"
+          alt="Developer toolkit example"
+          format="webp"
+          loading="lazy"
+          sizes="90vw md:500px"
+        />
+      </div>
+    </div>
+  </section>
+  <span class="divider"></span>
+</template>
+
+<style scoped lang="scss">
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 10vw;
+  margin-top: calc(-10vw - 2rem);
+
+  &-card {
+    max-width: 80vw;
+    z-index: 1;
+    background-color: var(--color-background);
+    display: grid;
+    grid-template-areas: 
+      "info img"
+      "actions img";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid var(--color-primary);
+    padding: 2rem;
+
+    &__info,
+    &__img {
+      flex: 1;
+    }
+
+    &__info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+      gap: 3rem;
+    }
+
+    &__img {
+      grid-area: img;
+    }
+
+    &__title {
+      text-shadow: var(--text-shadow-primary);
+      border: 1px solid var(--color-primary);
+      padding: 0.5rem 1rem;
+    }
+
+    &__desc {
+      font-size: 1.2rem;
+    }
+
+    &__actions {
+      grid-area: actions;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+
+      // a {
+      //   padding: 0.5rem 1rem;
+      //   border: 1px solid var(--color-primary);
+      //   border-radius: 0.5rem;
+      //   text-decoration: none;
+      //   color: var(--color-primary);
+      //   transition: all 0.3s;
+
+      //   &:hover {
+      //     background-color: var(--color-primary);
+      //     color: var(--color-secondary);
+      //   }
+      // }
+    }
+
+    @media (max-width: 1024px) {
+      width: 60vw;
+      grid-template-areas: 
+        "info"
+        "img"
+        "actions";
+      grid-template-columns: 1fr;
+
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+
+      &__info {
+        align-items: center;
+        gap: 2rem;
+      }
+
+      &__actions {
+        justify-content: center;
+      }
+
+      &__desc {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 90vw;
+    }
+
+    @media (max-width: 620px) {
+      gap: 1rem;
+
+      &__info {
+        gap: 1rem;
+      }
+
+      &__actions {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      &__desc {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+</style>
