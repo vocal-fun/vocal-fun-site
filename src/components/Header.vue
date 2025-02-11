@@ -59,10 +59,10 @@ const app = mainAppUrl;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 1.25em;
-  height: 41px;
+  margin: 1.25rem;
 
   .logo {
+    flex: 1;
     margin: 0.5rem;
     font-size: 1.2rem;
     display: inline-flex;
@@ -71,11 +71,13 @@ const app = mainAppUrl;
     text-transform: uppercase;
 
     &-bar {
+      flex: 1;
       display: flex;
       flex-direction: row;
       border-radius: 4px;
       padding: 2px;
       background-color: var(--color-secondary-bg);
+      max-width: 6rem;
 
       &:first-child {
         margin-right: 2px;
@@ -83,7 +85,7 @@ const app = mainAppUrl;
 
       &-element {
         flex: 1;
-        width: 6rem;
+        width: 100%;
         border-radius: 2px;
         height: 0.5rem;
         background: linear-gradient(180deg, #87FF8A 0%, #87FF8A 20%, #FFFFFF 21%, #FFFFFF 40%, #016B01 41%, #016B01 60%, #16EE14 61%, #16EE14 80%, #87FF8A 81%, #87FF8A 100%);
@@ -92,6 +94,7 @@ const app = mainAppUrl;
   }
 
   .socials {
+    flex: 1;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -128,6 +131,8 @@ const app = mainAppUrl;
   }
 
   .app-link {
+    flex: 1;
+    text-align: end;
     text-shadow: var(--text-shadow-primary);
   }
 }
@@ -144,6 +149,7 @@ const app = mainAppUrl;
     }
 
     .logo {
+      width: 100%;
       margin: 0;
       justify-content: center;
     }
