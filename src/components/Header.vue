@@ -69,6 +69,7 @@ const app = mainAppUrl;
     font-size: 1.2rem;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     text-transform: uppercase;
 
@@ -156,7 +157,6 @@ const app = mainAppUrl;
     .logo {
       width: 100%;
       margin: 0;
-      justify-content: center;
     }
   }
 }
