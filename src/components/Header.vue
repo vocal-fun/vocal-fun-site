@@ -41,7 +41,9 @@
       <span class="logo-bar"><span class="logo-bar-element"></span></span>
     </span>
 
-    <a v-play-click-sound class="app-link hoverable-link" target="_blank" rel="noopener noreferrer" :href="app">Open app</a>
+    <span class="app-link">
+      <a v-play-click-sound class="hoverable-link" target="_blank" rel="noopener noreferrer" :href="app">Open app</a>
+    </span>
   </header>
   <span class="divider"></span>
 </template>
@@ -132,8 +134,11 @@ const app = mainAppUrl;
 
   .app-link {
     flex: 1;
-    text-align: end;
-    text-shadow: var(--text-shadow-primary);
+    display: flex;
+    justify-content: flex-end;
+    > a {
+      text-shadow: var(--text-shadow-primary);
+    }
   }
 }
 
