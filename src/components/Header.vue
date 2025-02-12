@@ -86,6 +86,10 @@ const app = mainAppUrl;
         margin-right: 2px;
       }
 
+      &:last-child {
+        margin-left: 2px;
+      }
+
       &-element {
         flex: 1;
         width: 100%;
