@@ -6,7 +6,7 @@
         <span class="desc-card__desc">Talk with uncensored AI agents</span>
       </div>
       <div class="desc-card__actions">
-        <MainLink type="secondary" href="#">Use now</MainLink>
+        <MainLink type="secondary" :href="app">Use now</MainLink>
         <a v-play-click-sound class="animated-link" href="#">Community convos</a>
       </div>
       <div class="desc-card__img">
@@ -21,11 +21,11 @@
     </div>
     <div class="desc-card">
       <div class="desc-card__info">
-        <span class="desc-card__title">DEVELOPER TOOLKIP</span>
+        <span class="desc-card__title">DEVELOPER TOOLKIT</span>
         <span class="desc-card__desc">Develop your own conversational agents</span>
       </div>
       <div class="desc-card__actions">
-        <MainLink type="secondary" href="#">Use now</MainLink>
+        <MainLink type="secondary" :href="app">Use now</MainLink>
         <a v-play-click-sound class="animated-link" href="#">Documentation</a>
       </div>
       <div class="desc-card__img">
@@ -41,6 +41,12 @@
   </section>
   <span class="divider"></span>
 </template>
+
+<script setup lang="ts">
+import { mainAppUrl } from '~/consts';
+
+const app = mainAppUrl;
+</script>
 
 <style scoped lang="scss">
 .desc {

@@ -19,17 +19,20 @@
     <p v-if="false" class="h1">
       Inviting developers to build the next ecosystem of on-chain agents & off-chain applications powered by open source AI & crypto infrastructure.
     </p>
-    <MainLink v-if="false" type="primary" href="#">Apply now</MainLink>
+    <MainLink v-if="false" type="primary" :href="app">Apply now</MainLink>
   </section>
 </template>
 
 <script setup lang="ts">
 import { type CarouselConfig } from 'vue3-carousel';
+import { mainAppUrl } from '~/consts';
 
 const data = Array.from({ length: 6 }, (_, index) => ({
   id: index + 1,
   url: `/img/apply-${index < 5 ? index + 1 : index - 2}.png`,
 }));
+
+const app = mainAppUrl;
 
 const carouselConfig: Partial<CarouselConfig> = {
   itemsToShow: 3.5,

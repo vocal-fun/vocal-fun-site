@@ -27,12 +27,12 @@
 </template>
 
 <script setup lang="ts">
-import { socialMediaArray } from '~/consts';
+import { socialMediaArray, mainAppUrl } from '~/consts';
 import type { SocialMediaKey } from '~/types';
 
 type FooterLink = { type?: SocialMediaKey; href: string; text?: string };
 
-const footerLinks: FooterLink[] = [...socialMediaArray, { type: undefined, href: '#', text: '$VOCAL' }];
+const footerLinks: FooterLink[] = [...socialMediaArray, { type: undefined, href: mainAppUrl, text: '$VOCAL' }];
 </script>
 
 <style scoped lang="scss">
