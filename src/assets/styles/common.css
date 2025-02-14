@@ -39,27 +39,19 @@ section:not(.carousel) {
 }
 
 /* #region Carousel */
-/* .carousel__next:focus-visible,
-.carousel__prev:focus-visible {
-  border-radius: var(--vc-nav-border-radius);
-} */
-
-.carousel__viewport {
-  perspective: 2000px;
+ul.splide__pagination {
+  bottom: auto;
 }
-
-.carousel__track {
-  transform-style: preserve-3d;
+button.splide__pagination__page {
+  background: var(--color-secondary-bg);
 }
-
-.carousel__slide--sliding {
-  transition: opacity var(--carousel-transition),
-    transform var(--carousel-transition);
+button.splide__pagination__page.is-active {
+  background: var(--color-primary);
 }
-
-.carousel.is-dragging .carousel__slide {
-  transition: opacity var(--carousel-transition),
-    transform var(--carousel-transition);
+button.splide__pagination__page:focus-visible,
+.splide.is-focus-in button.splide__pagination__page:focus {
+  outline: 3px dashed var(--color-primary);
+  outline-offset: 3px;
 }
 /* #endregion */
 

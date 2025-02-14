@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  css: ['~/assets/styles/index.css', 'vue3-carousel/carousel.css'],
-  modules: ['@nuxt/image', '@nuxtjs/sitemap', 'vue3-carousel-nuxt'],
+  css: ['~/assets/styles/index.css', '@splidejs/splide/dist/css/splide.min.css'],
+  modules: ['@nuxt/image', '@nuxtjs/sitemap'],
 
   app: {
     head: {

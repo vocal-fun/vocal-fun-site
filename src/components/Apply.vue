@@ -1,21 +1,17 @@
 <template>
   <section class="apply">
-    <Carousel v-bind="carouselConfig">
-      <Slide v-for="item in data" :key="`apply-${item.id}`">
+    <Splide v-bind="splideConfig">
+      <SplideSlide v-for="item in data" :key="item.id">
         <NuxtImg
           sizes="(max-width: 768px) 40vw, 400px"
           format="webp"
-          quality="40"
           loading="lazy"
           :modifiers="{ width: 400, quality: 80 }"
           :src="item.url"
           :alt="`Image for Apply ${item.id} Slide`"
         />
-      </Slide>
-      <!-- <template #addons>
-        <Pagination />
-      </template> -->
-    </Carousel>
+      </SplideSlide>
+    </Splide>
     <p v-if="false" class="h1">
       Inviting developers to build the next ecosystem of on-chain agents & off-chain applications powered by open source AI & crypto infrastructure.
     </p>
@@ -24,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { type CarouselConfig } from 'vue3-carousel';
+import { SplideSlide, Splide, type SlideProps } from '@splidejs/vue-splide';
 import { mainAppUrl } from '~/consts';
 
 const data = Array.from({ length: 6 }, (_, index) => ({
@@ -34,22 +30,28 @@ const data = Array.from({ length: 6 }, (_, index) => ({
 
 const app = mainAppUrl;
 
-const carouselConfig: Partial<CarouselConfig> = {
-  itemsToShow: 3.5,
-  gap: 2,
-  autoplay: 4000,
-  wrapAround: true,
-  pauseAutoplayOnHover: true,
-  snapAlign: 'center',
-  breakpoints: {
-    300: {
-      itemsToShow: 1.5,
-    },
-    480: {
-      itemsToShow: 2.5,
-    },
-    640: {
-      itemsToShow: 3.5,
+const splideConfig: SlideProps = {
+  options: {
+    type: 'loop',
+    perPage: 3.5,
+    autoplay: true,
+    interval: 4_000,
+    pauseOnHover: true,
+    arrows: false,
+    pagination: true,
+    focus: 'center',
+    drag: true,
+    trimSpace: false,
+    speed: 1_000,
+    easing: 'cubic-bezier(.42,.65,.27,.99)',
+    lazyLoad: 'nearby',
+    breakpoints: {
+      480: {
+        perPage: 1.5,
+      },
+      640: {
+        perPage: 2.5,
+      },
     },
   },
 };

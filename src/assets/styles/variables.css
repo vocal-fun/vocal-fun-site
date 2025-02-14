@@ -12,11 +12,4 @@
   --lg: 1024px;
   --xl: 1280px;
   --xxl: 1536px;
-  /* Carousel */
-  --carousel-transition: 300ms;
-  --carousel-opacity-inactive: 0.6;
-  --carousel-opacity-active: 1;
-  --carousel-opacity-near: 0.8;
-  /* --vc-nav-background: var(--color-secondary-bg);
-  --vc-nav-border-radius: 50%; */
 }
