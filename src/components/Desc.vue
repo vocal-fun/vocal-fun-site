@@ -7,7 +7,7 @@
       </div>
       <div class="desc-card__actions">
         <MainLink type="secondary" :href="app">Use now</MainLink>
-        <a v-play-click-sound class="animated-link" href="#">Community convos</a>
+        <a v-play-click-sound class="animated-link" target="_blank" rel="noopener noreferrer" :href="socials.twitter">Community convos</a>
       </div>
       <div class="desc-card__img">
         <NuxtImg
@@ -26,7 +26,7 @@
       </div>
       <div class="desc-card__actions">
         <MainLink type="secondary" :href="app">Use now</MainLink>
-        <a v-play-click-sound class="animated-link" href="#">Documentation</a>
+        <a v-play-click-sound class="animated-link" target="_blank" rel="noopener noreferrer" :href="socials.github">Documentation</a>
       </div>
       <div class="desc-card__img">
         <NuxtImg
@@ -43,8 +43,9 @@
 </template>
 
 <script setup lang="ts">
-import { mainAppUrl } from '~/consts';
+import { mainAppUrl, socialMedia } from '~/consts';
 
+const socials = socialMedia;
 const app = mainAppUrl;
 </script>
 
