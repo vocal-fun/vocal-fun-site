@@ -1,7 +1,7 @@
 import type { SocialMediaItem, SocialMediaKey } from './types';
 
 export const socialMedia = {
-  github: 'https://github.com/vocalfun',
+  github: 'https://github.com/vocal-fun',
   telegram: 'https://t.me/vocalfunofficial',
   twitter: 'https://x.com/vocal_fun',
 };
