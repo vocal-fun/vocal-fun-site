@@ -1,6 +1,6 @@
 <template>
   <section class="main">
-    <h1>VOICE AGENT FRAMEWORK</h1>
+    <h1>VOICE AGENT PLATFORM</h1>
     <div class="main-carousel__container">
       <NuxtImg
         class="main-bg shake shake-constant"
