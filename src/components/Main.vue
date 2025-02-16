@@ -97,7 +97,7 @@ $carousel-opacity-near: 0.8;
     }
     &.is-next {
       opacity: $carousel-opacity-near;
-      transform: translateX(0) rotateY(10deg) scale(0.9);
+      transform: translateX(-1rem) rotateY(10deg) scale(0.9);
       + .splide__slide {
         opacity: $carousel-opacity-inactive;
         transform-origin: center left;
