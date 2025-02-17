@@ -7,7 +7,7 @@
         src="/img/main-bg.png"
         alt="Main Background"
         format="webp"
-        quality="10"
+        quality="1"
       />
       <Splide ref="splideRef" class="main-carousel" v-bind="splideConfig">
         <SplideSlide v-for="agent in agents" :key="agent.id">

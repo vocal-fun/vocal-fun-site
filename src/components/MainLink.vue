@@ -69,7 +69,7 @@ const isSecondary = computed(() => props.type === 'secondary');
 
   &__arrow {
     margin-left: 0.3rem;
-    margin-top: 0.4rem;
+    margin-top: 0.2rem;
   }
 }
 

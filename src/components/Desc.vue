@@ -15,6 +15,7 @@
           alt="Realtime conversation example"
           format="webp"
           loading="lazy"
+          quality="80"
           sizes="90vw md:500px"
         />
       </div>
@@ -34,6 +35,7 @@
           alt="Developer toolkit example"
           format="webp"
           loading="lazy"
+          quality="80"
           sizes="90vw md:500px"
         />
       </div>

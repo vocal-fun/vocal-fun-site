@@ -3,9 +3,11 @@
     <Splide v-bind="splideConfig">
       <SplideSlide v-for="item in data" :key="item.id">
         <NuxtImg
+          class="apply__image"
           sizes="(max-width: 768px) 40vw, 400px"
           format="webp"
           loading="lazy"
+          quality="80"
           :modifiers="{ width: 400, quality: 80 }"
           :src="item.url"
           :alt="`Image for Apply ${item.id} Slide`"
@@ -63,8 +65,11 @@ const splideConfig: SlideProps = {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   min-height: 30rem; // remove it later
+  &__image {
+    width: 100%;
+  }
   &__action {
     margin: 1rem 0;
     padding: 0.5rem 1rem;
