@@ -8,7 +8,7 @@
           src="/img/build-1.png"
           alt="Uncensored Open Source Models"
           format="webp"
-          quality="40"
+          quality="60"
           loading="lazy"
         />
         <TextField with-blink with-jerk with-long-jerk>UNCENSORED OPEN SOURCE MODELS</TextField>
@@ -19,7 +19,7 @@
           src="/img/build-2.png"
           alt="Trustless Decentralized Interface"
           format="webp"
-          quality="40"
+          quality="60"
           loading="lazy"
         />
         <TextField with-blink with-jerk with-long-jerk>TRUSTLESS DECENTRALIZED INTERFACE</TextField>
@@ -30,7 +30,7 @@
           src="/img/build-3.png"
           alt="On-Chain Agent Provenance"
           format="webp"
-          quality="40"
+          quality="60"
           loading="lazy"
         />
         <TextField with-blink with-jerk with-long-jerk>ON-CHAIN AGENT PROVENANCE</TextField>
