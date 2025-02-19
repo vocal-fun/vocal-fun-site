@@ -11,13 +11,15 @@
       />
       <Splide ref="splideRef" class="main-carousel" v-bind="splideConfig">
         <SplideSlide v-for="agent in agents" :key="agent.id">
-          <NuxtImg
-            sizes="(max-width: 768px) 40vw, 400px"
-            format="webp"
-            :modifiers="{ width: 400, quality: 80 }"
-            :src="agent.url"
-            :alt="`Agent ${agent.id} Image`"
-          />
+          <a v-play-click-sound class="main-carousel__link" target="_blank" rel="noopener noreferrer" :href="agent.href">
+            <NuxtImg
+              sizes="(max-width: 768px) 40vw, 400px"
+              format="webp"
+              :modifiers="{ width: 400, quality: 80 }"
+              :src="agent.url"
+              :alt="`Agent ${agent.id} Image`"
+            />
+          </a>
         </SplideSlide>
       </Splide>
     </div>
@@ -28,12 +30,25 @@
 
 <script setup lang="ts">
 import { SplideSlide, Splide, type SlideExposed, type SlideProps } from '@splidejs/vue-splide';
+import { mainAppUrl } from '~/consts';
 
 const splideRef = shallowRef<SlideExposed | null>(null);
 
-const agents = Array.from({ length: 8 }, (_, index) => ({
-  id: index + 1,
-  url: `/img/agents/${index + 1}.png`,
+const agentsStr = [
+  '1',
+  'sydney-sweeney',
+  'vitalik-buterin',
+  'donald-trump',
+  'changpeng-zhao',
+  'vladimir-putin',
+  'elon-musk',
+  'kanye-west',
+];
+
+const agents = agentsStr.map((item) => ({
+  id: item,
+  url: `/img/agents/${item}.png`,
+  href: item !== '1' ? `${mainAppUrl}/${item}` : mainAppUrl,
 }));
 
 const splideConfig: SlideProps = {
@@ -86,12 +101,18 @@ $carousel-opacity-near: 0.8;
   &.is-prev {
     transform: scale(1) rotateY(-10deg);
   }
+  // Desktop (issue with center slide)
+  @media (min-width: 1024px) {
+    &.is-active {
+      transform: translateX(-1rem) scale(1) rotateY(0deg);
+    }
+  }
   // Desktop
   @media (min-width: 640px) {
     opacity: 0;
     transform: scale(0.7) rotateY(0deg) translateX(0);
     &.is-active {
-      transform: translateX(-1rem) scale(1) rotateY(0deg);
+      transform: translateX(-1.25rem) scale(1) rotateY(0deg);
       opacity: $carousel-opacity-active;
     }
     &.is-next {
@@ -139,6 +160,18 @@ $carousel-opacity-near: 0.8;
 
   &-carousel__container {
     position: relative;
+    margin: 1rem 0;
+  }
+
+  &-carousel__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:focus-visible {
+      outline: none;
+      border-radius: 6px;
+      background-color: var(--color-primary);
+    }
   }
 
   &-bg {
