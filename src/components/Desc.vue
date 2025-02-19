@@ -1,9 +1,9 @@
 <template>
   <section class="desc">
-    <div class="desc-card">
+    <div class="desc-card scanlines">
       <div class="desc-card__info">
-        <span class="desc-card__title">REALTIME CONVERSATION</span>
-        <span class="desc-card__desc">Talk with uncensored AI agents</span>
+        <TextField with-blink class="desc-card__title">REALTIME CONVERSATION</TextField>
+        <TextField with-blink class="desc-card__desc">Talk with uncensored AI agents</TextField>
       </div>
       <div class="desc-card__actions">
         <MainLink type="secondary" :href="app">Use now</MainLink>
@@ -20,10 +20,10 @@
         />
       </div>
     </div>
-    <div class="desc-card">
+    <div class="desc-card scanlines">
       <div class="desc-card__info">
-        <span class="desc-card__title">DEVELOPER TOOLKIT</span>
-        <span class="desc-card__desc">Develop your own conversational agents</span>
+        <TextField with-blink class="desc-card__title">DEVELOPER TOOLKIT</TextField>
+        <TextField with-blink class="desc-card__desc">Develop your own conversational agents</TextField>
       </div>
       <div class="desc-card__actions">
         <MainLink type="secondary" :href="app">Use now</MainLink>

@@ -1,6 +1,6 @@
 <template>
   <section class="build">
-    <h1>BUILDING A NEW OPEN ECOSYSTEM</h1>
+    <TextField with-blink with-jerk with-long-jerk class="build__title" tag="h1">BUILDING A NEW OPEN ECOSYSTEM</TextField>
     <div class="build__content">
       <div class="build__block">
         <NuxtImg
@@ -11,7 +11,7 @@
           quality="40"
           loading="lazy"
         />
-        <span>UNCENSORED OPEN SOURCE MODELS</span>
+        <TextField with-blink with-jerk with-long-jerk>UNCENSORED OPEN SOURCE MODELS</TextField>
       </div>
       <div class="build__block">
         <NuxtImg
@@ -22,7 +22,7 @@
           quality="40"
           loading="lazy"
         />
-        <span>TRUSTLESS DECENTRALIZED INTERFACE</span>
+        <TextField with-blink with-jerk with-long-jerk>TRUSTLESS DECENTRALIZED INTERFACE</TextField>
       </div>
       <div class="build__block">
         <NuxtImg
@@ -33,7 +33,7 @@
           quality="40"
           loading="lazy"
         />
-        <span>ON-CHAIN AGENT PROVENANCE</span>
+        <TextField with-blink with-jerk with-long-jerk>ON-CHAIN AGENT PROVENANCE</TextField>
       </div>
     </div>
     <div class="build__actions">
@@ -104,7 +104,7 @@ const app = mainAppUrl;
     }
   }
 
-  h1 {
+  &__title {
     text-align: center;
   }
 }

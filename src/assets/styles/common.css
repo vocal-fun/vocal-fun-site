@@ -161,13 +161,12 @@ a {
   opacity: 1;
 }
 
-.cursor-link {
+.cursor {
   display: inline-block;
   color: currentColor;
-  cursor: pointer;
 }
 
-.cursor-link::after {
+.cursor::after {
   content: "_";
   display: inline-block;
   margin-left: 4px;

@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  css: ['~/assets/styles/index.css', '@splidejs/splide/dist/css/splide.min.css'],
+  css: ['~/assets/styles/index.css', '@splidejs/splide/dist/css/splide.min.css', '~/assets/styles/crt.scss'],
   modules: ['@nuxt/image', '@nuxtjs/sitemap'],
 
   app: {

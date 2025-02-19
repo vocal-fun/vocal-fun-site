@@ -1,6 +1,6 @@
 <template>
   <section class="main">
-    <h1>VOICE AGENT PLATFORM</h1>
+    <TextField with-blink with-jerk with-long-jerk class="main__title" tag="h1">VOICE AGENT PLATFORM</TextField>
     <div class="main-carousel__container">
       <NuxtImg
         class="main-bg shake shake-constant"
@@ -21,7 +21,7 @@
         </SplideSlide>
       </Splide>
     </div>
-    <p class="p1">for the open tokenized world</p>
+    <TextField with-blink with-jerk with-long-jerk tag="p" class="p1">for the open tokenized world</TextField>
   </section>
   <span class="divider"></span>
 </template>
@@ -150,12 +150,13 @@ $carousel-opacity-near: 0.8;
     object-fit: cover;
   }
 
-  h1 {
+  &__title {
     border: 1px solid var(--color-secondary-bg);
     padding: 0.5rem 1rem;
   }
 
-  h1, .p1 {
+  &__title,
+  .p1 {
     text-align: center;
   }
 

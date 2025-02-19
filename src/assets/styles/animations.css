@@ -12,3 +12,36 @@
 @keyframes blink {
   50% { color: transparent; }
 }
+
+@keyframes textLongJerk {
+  40% {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: scale(1,1) skew(0,0);
+  }
+  41% {
+    opacity: 0.8;
+    transform: translateX(-100px);
+    transform: scale(1, 1.2) skew(50deg, 0);
+  }
+  42% {
+    opacity: 0.8;
+    transform: translateX(100px);
+    transform: scale(1, 1.2) skew(-80deg, 0);
+  }
+  43% {
+    opacity: 1;
+    transform: translateX(0px);
+    transform:scale(1, 1) skew(0, 0);
+  }
+}
+
+@keyframes textJerk {
+  50% { transform: translateX(1px); }
+  51% { transform: translateX(0px); }
+}
+
+@keyframes textBlink {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+}

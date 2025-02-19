@@ -1,5 +1,5 @@
 <template>
-  <section class="own">
+  <section class="own scanlines">
     <p class="h1">Vocal.fun empowers creators to build and monetize AI,</p>
     <p class="h1">from DeFi ADVISORS to anime WAIFU companions. Powered by open models and trustless tech,</p>
     <p class="h1">the future of ai IS OPEN AND decentralized.</p>
