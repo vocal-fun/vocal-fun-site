@@ -91,6 +91,7 @@ const app = mainAppUrl;
       text-shadow: var(--text-shadow-primary);
       border: 1px solid var(--color-primary);
       padding: 0.5rem 1rem;
+      text-align: center;
     }
 
     &__desc {
