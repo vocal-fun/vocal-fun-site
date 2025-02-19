@@ -14,7 +14,6 @@
           <NuxtImg
             sizes="(max-width: 768px) 40vw, 400px"
             format="webp"
-            loading="lazy"
             :modifiers="{ width: 400, quality: 80 }"
             :src="agent.url"
             :alt="`Agent ${agent.id} Image`"
