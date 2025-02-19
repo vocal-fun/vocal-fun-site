@@ -137,7 +137,7 @@ const app = mainAppUrl;
     }
 
     @media (max-width: 620px) {
-      gap: 1rem;
+      gap: 2rem;
 
       &__info {
         gap: 1rem;
