@@ -117,6 +117,7 @@ const app = mainAppUrl;
     &__content {
       flex-direction: column;
       align-items: center;
+      gap: 3rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
