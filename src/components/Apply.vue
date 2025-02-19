@@ -6,7 +6,6 @@
           class="apply__image"
           sizes="(max-width: 768px) 40vw, 400px"
           format="webp"
-          loading="lazy"
           quality="80"
           :modifiers="{ width: 400, quality: 80 }"
           :src="item.url"
