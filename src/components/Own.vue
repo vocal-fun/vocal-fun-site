@@ -5,6 +5,7 @@
     <p class="h1">the future of ai IS OPEN AND decentralized.</p>
     <p class="h1">own it.</p>
   </section>
+  <span class="divider"></span>
 </template>
 
 <script setup lang="ts">
