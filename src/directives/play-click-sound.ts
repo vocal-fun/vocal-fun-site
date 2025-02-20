@@ -1,12 +1,12 @@
 import { audioService } from '~/services/audio';
-import type { DirectiveBinding } from 'vue';
+import type { Directive } from 'vue';
 
 interface PlayClickSoundElement extends HTMLElement {
   __playSoundCleanup?: () => void;
 }
 
-const playClickSound = {
-  mounted(el: PlayClickSoundElement, binding: DirectiveBinding) {
+const playClickSound: Directive<HTMLElement> = {
+  mounted(el: PlayClickSoundElement, binding) {
     const play = () => audioService.click();
 
     el.addEventListener('click', play, { passive: true });

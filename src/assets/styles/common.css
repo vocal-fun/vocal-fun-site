@@ -160,16 +160,4 @@ a {
   transform: scaleX(1);
   opacity: 1;
 }
-
-.cursor {
-  display: inline-block;
-  color: currentColor;
-}
-
-.cursor::after {
-  content: "_";
-  display: inline-block;
-  margin-left: 4px;
-  animation: blink 1s infinite;
-}
 /* #endregion */

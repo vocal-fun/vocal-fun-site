@@ -1,14 +1,17 @@
 <template>
   <section class="own scanlines">
-    <p class="h1">Vocal.fun empowers creators to build and monetize AI,</p>
-    <p class="h1">from DeFi ADVISORS to anime WAIFU companions. Powered by open models and trustless tech,</p>
-    <p class="h1">the future of ai IS OPEN AND decentralized.</p>
-    <p class="h1">own it.</p>
+    <ClientOnly>
+      <TerminalText :text="text" />
+    </ClientOnly>
   </section>
   <span class="divider"></span>
 </template>
 
 <script setup lang="ts">
+const text = 'Vocal.fun empowers creators to build and monetize AI,\n' +
+  'from DeFi ADVISORS to anime WAIFU companions. Powered by open models and trustless tech,\n' +
+  'the future of ai IS OPEN AND decentralized.\n' +
+  'own it.';
 </script>
 
 <style scoped lang="scss">
@@ -19,9 +22,6 @@
   align-items: baseline;
   min-height: 90svh;
   padding: 2rem 20vw;
-  p {
-    text-transform: uppercase;
-  }
 }
 @media (max-width: 1024px) {
   .own {
