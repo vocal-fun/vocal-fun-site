@@ -1,5 +1,5 @@
 <template>
-  <div v-viewport class="terminal h1" @enterViewport="restartTyping">
+  <div v-viewport ref="terminal" class="terminal h1" @enterViewport="restartTyping">
     <template v-for="(paragraph, pIndex) in paragraphs" :key="pIndex">
       <div class="paragraph">
         <template v-for="(word, wIndex) in paragraph" :key="wIndex">
@@ -22,6 +22,8 @@ const CHAR_DELAY = 0.015; // Delay between each character
 
 const { text } = defineProps<{ text: string }>();
 
+const terminal = ref<HTMLElement | null>(null);
+
 const paragraphs = computed(() =>
   text.split('\n').map((p) =>
     p
@@ -42,8 +44,7 @@ const isCurrentChar = (pIndex: number, wIndex: number, cIndex: number) =>
   cIndex === currentCharIndex.value;
 
 const resetAnimation = () => {
-  const chars = document.querySelectorAll('.char');
-  chars.forEach((char) => char.classList.remove('entered'));
+  terminal.value?.querySelectorAll('.char').forEach((char) => char.classList.remove('entered'));
 
   currentParagraphIndex.value = 0;
   currentWordIndex.value = 0;
@@ -52,7 +53,7 @@ const resetAnimation = () => {
 
 const updateCursor = async () => {
   await nextTick();
-  const chars = document.querySelectorAll('.char');
+  const chars = terminal.value?.querySelectorAll('.char');
   const flatIndex = paragraphs.value
     .slice(0, currentParagraphIndex.value)
     .reduce(
@@ -66,7 +67,7 @@ const updateCursor = async () => {
       .reduce((sum, word) => sum + word.length, 0) +
     currentCharIndex.value;
 
-  const currentCharEl = chars[flatIndex];
+  const currentCharEl = chars?.[flatIndex];
   currentCharEl?.classList.add('entered');
 };
 

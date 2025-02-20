@@ -1,7 +1,5 @@
 import type { Directive } from 'vue';
 
-const DELAY_POWER = 0.1;
-
 let intersectionObserver: IntersectionObserver;
 
 function ensureIntersectionObserver(): void {
@@ -23,9 +21,6 @@ function ensureIntersectionObserver(): void {
 
 const viewport: Directive<HTMLElement> = {
   mounted: (el, bindings) => {
-    if (bindings?.value) {
-      el.style.transitionDelay = `${bindings.value * DELAY_POWER}s`;
-    }
     ensureIntersectionObserver();
     intersectionObserver.observe(el);
   },
