@@ -6,6 +6,6 @@ export const socialMedia = {
   twitter: 'https://x.com/vocal_fun',
 };
 
-export const mainAppUrl = 'https://app.vocal.fun';
+export const mainAppUrl = 'https://vocal.fun';
 
 export const socialMediaArray: SocialMediaItem[] = Object.entries(socialMedia).map(([type, href]) => ({ type: type as SocialMediaKey, href }));
