@@ -37,7 +37,7 @@ const footerLinks: FooterLink[] = [...socialMediaArray, { type: undefined, href:
 
 <style scoped lang="scss">
 .footer {
-  border-top: 2px solid var(--color-secondary-bg);
+  // border-top: 2px solid var(--color-secondary-bg);
   background-color: #000;
   margin: 0 2rem 1.5rem;
   padding-top: 1.5rem;

@@ -8,10 +8,10 @@
 </template>
 
 <script setup lang="ts">
-const text = 'Vocal.fun empowers creators to build and monetize AI,\n' +
-  'from DeFi ADVISORS to anime WAIFU companions. Powered by open models and trustless tech,\n' +
-  'the future of ai IS OPEN AND decentralized.\n' +
-  'own it.';
+const text = 'VOCAL.FUN IS THE LAUNCHPAD FOR AI VOICE AGENTS.\n' +
+  'CREATE, MONETIZE, AND SCALE YOUR AGENTS FROM DEFI ADVISORS TO ANIME WAIFUS.\n' +
+  'THE FUTURE OF AI IS OPEN AND DECENTRALIZED.\n' +
+  'LAUNCH YOUR AI TODAY.';
 </script>
 
 <style scoped lang="scss">

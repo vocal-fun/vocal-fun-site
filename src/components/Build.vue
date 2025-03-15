@@ -1,6 +1,6 @@
 <template>
   <section class="build">
-    <TextField with-blink with-jerk with-long-jerk class="build__title" tag="h1">BUILDING A NEW OPEN ECOSYSTEM</TextField>
+    <TextField with-blink with-jerk with-long-jerk class="build__title" tag="h1">A NEW OPEN ECOSYSTEM</TextField>
     <div class="build__content">
       <div class="build__block">
         <NuxtImg

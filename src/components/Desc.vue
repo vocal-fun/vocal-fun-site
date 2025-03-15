@@ -3,7 +3,7 @@
     <div class="desc-card scanlines">
       <div class="desc-card__info">
         <TextField with-blink class="desc-card__title">REALTIME CONVERSATION</TextField>
-        <TextField with-blink class="desc-card__desc">Talk with uncensored AI agents</TextField>
+        <TextField with-blink class="desc-card__desc">Talk to uncensored AI agents</TextField>
       </div>
       <div class="desc-card__actions">
         <MainLink type="secondary" :href="app">Use now</MainLink>
@@ -22,12 +22,12 @@
     </div>
     <div class="desc-card scanlines">
       <div class="desc-card__info">
-        <TextField with-blink class="desc-card__title">DEVELOPER TOOLKIT</TextField>
-        <TextField with-blink class="desc-card__desc">Develop your own conversational agents</TextField>
+        <TextField with-blink class="desc-card__title">LAUNCH YOUR AI</TextField>
+        <TextField with-blink class="desc-card__desc">Launch your own AI voice agents</TextField>
       </div>
       <div class="desc-card__actions">
         <MainLink type="secondary" :href="app">Use now</MainLink>
-        <a v-play-click-sound class="animated-link" target="_blank" rel="noopener noreferrer" :href="socials.github">Documentation</a>
+        <a v-play-click-sound class="animated-link" target="_blank" rel="noopener noreferrer" :href="socials.github">How to</a>
       </div>
       <div class="desc-card__img">
         <NuxtImg

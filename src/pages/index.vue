@@ -3,5 +3,5 @@
   <Desc />
   <Build />
   <Own />
-  <Apply />
+  <Apply v-if="false" />
 </template>

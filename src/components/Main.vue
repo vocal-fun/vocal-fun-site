@@ -1,6 +1,6 @@
 <template>
   <section class="main">
-    <TextField with-blink with-jerk with-long-jerk class="main__title" tag="h1">VOICE AGENT PLATFORM</TextField>
+    <TextField with-blink with-jerk with-long-jerk class="main__title" tag="h1">VOICE AGENT LAUNCHPAD</TextField>
     <div class="main-carousel__container">
       <NuxtImg
         class="main-bg shake shake-constant"
@@ -23,7 +23,7 @@
         </SplideSlide>
       </Splide>
     </div>
-    <TextField with-blink with-jerk with-long-jerk tag="p" class="p1">for the open tokenized world</TextField>
+    <TextField with-blink with-jerk with-long-jerk tag="p" class="p1">Launch AI voice agent tokens</TextField>
   </section>
   <span class="divider"></span>
 </template>
